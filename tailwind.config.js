@@ -1,5 +1,5 @@
 /** @type {import('tailwindcss').Config} */
-module.exports = {
+export default {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {},
@@ -10,5 +10,5 @@ module.exports = {
   daisyui: {
     themes: [],
   },
-  plugins: [require("daisyui")],
+  plugins: ["daisyui", "tailwindcss/forms"],
 };
