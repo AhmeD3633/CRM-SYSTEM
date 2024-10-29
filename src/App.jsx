@@ -1,14 +1,7 @@
-import './App.css'
-import SignIN from './components/SignIN'
+import "./App.css";
 
 function App() {
- 
-
-  return (
-    <>
-    <SignIN />
-    </>
-  )
+  return <></>;
 }
 
-export default App
+export default App;
