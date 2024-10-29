@@ -12,10 +12,10 @@ function HomeLayout() {
       >
         <div className=" w-full  flex justify-around">
           <div>
-            <img src={charts} className="h-[300px] w-[450px] hidden md:block" alt="00....." />
+            <img src={charts} className="h-[55vh] w-[50vw] hidden md:block" alt="00....." />
           </div>
           <div className="text-right flex flex-col items-center md:items-end gap-5 w-[50%]">
-            <h1 className="text-[30px] line-clamp-3">
+            <h1 className="lg:text-4xl sm:text-2xl line-clamp-3">
               قم بتحسين عملك <br />
               بكفاءة باستخدام اقوي <br />
               <bdi>CRM</bdi> نظام 
