@@ -8,19 +8,19 @@ function HomeLayout() {
     <div>
       <div
         style={{ backgroundImage: `url(${bgImg})` }}
-        className={`h-[65vh] md:h-[70vh]  w-full px-10 bg-center rounded-md bg-cover flex items-center  bg-no-repeat relative capitalize overflow-hidden`}
+        className={`h-[65vh] md:h-[70vh] px-10 w-full bg-center rounded-md bg-cover flex items-center  bg-no-repeat relative capitalize overflow-hidden`}
       >
-        <div className=" w-full  flex justify-around">
+        <div className=" w-full items-center p-0 m-0 flex justify-around">
           <div>
-            <img src={charts} className="h-[55vh] w-[50vw] hidden md:block" alt="00....." />
+            <img src={charts} className="h-[55vh] w-[50vw] hidden lg:block" alt="00....." />
           </div>
-          <div className="text-center md:text-right flex flex-col items-center md:items-end gap-5">
+          <div className="text-center lg:text-right flex flex-col items-center lg:items-end gap-5">
             <h1 className="text-4xl">
               قم بتحسين عملك <br />
               بكفاءة باستخدام اقوي <br />
               <bdi>CRM</bdi> نظام 
             </h1>
-            <p className="text-gray-400 text-[14px]">
+            <p className="text-gray-400 text-[18px] lg:text-[14px]">
               يساعد ZBOOMA CRM الشركات على تطوير الأعمال <br />
               باستخدام التكنولوجيا والميزات التي تجعل الأمر أسهل<br></br>{" "}
               للمستخدمين.
