@@ -1,21 +1,21 @@
 import { FaLongArrowAltLeft } from "react-icons/fa";
-import bgImg from "../assets/images/Frame 2095584515.png";
-import charts from "../assets/images/Group 5.png";
-import stars from "../assets/images/Frame 2095584759.png";
+import bgImg from "../assets/Media/bg.png";
+import charts from "../assets/Media/test.png";
+import stars from "../assets/Media/Frame 2095584759.png";
 
 function HomeLayout() {
   return (
     <div>
       <div
         style={{ backgroundImage: `url(${bgImg})` }}
-        className={`h-[70vh] w-full px-10 bg-center rounded-md bg-cover flex items-center  bg-no-repeat relative capitalize overflow-hidden`}
+        className={`h-[65vh] md:h-[70vh]  w-full px-10 bg-center rounded-md bg-cover flex items-center  bg-no-repeat relative capitalize overflow-hidden`}
       >
         <div className=" w-full  flex justify-around">
           <div>
             <img src={charts} className="h-[55vh] w-[50vw] hidden md:block" alt="00....." />
           </div>
-          <div className="text-right flex flex-col items-center md:items-end gap-5 w-[50%]">
-            <h1 className="lg:text-4xl sm:text-2xl line-clamp-3">
+          <div className="text-center md:text-right flex flex-col items-center md:items-end gap-5">
+            <h1 className="text-4xl">
               قم بتحسين عملك <br />
               بكفاءة باستخدام اقوي <br />
               <bdi>CRM</bdi> نظام 
