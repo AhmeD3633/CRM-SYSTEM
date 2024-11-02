@@ -1,12 +1,12 @@
 import "./App.css";
 import SideBar from "./Components/SideBar";
-import Modal from "./Components/Modal";
+import AdminTimelineModal from "./Components/AdminTimelineModal";
 
 function App() {
   return (
     <>
       <SideBar />
-      <Modal />
+      <AdminTimelineModal />
     </>
   );
 }
