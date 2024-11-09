@@ -38,7 +38,7 @@ const SideBar = () => {
       <div
         className={`fixed md:relative md:flex w-80 h-screen flex-col justify-between right-0 bg-[#292929] border-l border-[#00c853] transition-transform duration-300 transform ${
           isOpen ? "translate-x-0" : "translate-x-full"
-        } md:translate-x-0 z-40`}
+        } md:translate-x-0 z-40 overflow-hidden`}
       >
         <div className="flex flex-col items-end justify-center w-full px-4 py-6 space-y-5">
           {/* Logo */}

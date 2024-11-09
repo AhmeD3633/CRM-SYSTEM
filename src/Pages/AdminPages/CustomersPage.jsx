@@ -9,7 +9,7 @@ const ListUsers = () => {
 
   return (
     <div className="flex h-screen bg-gray-100">
-      <div className="flex-grow bg-[#292929] p-4 mr-64">
+      <div className="flex-grow bg-[#292929] p-4 ">
         {/* Added margin-right to account for the sidebar */}
         <SearchFilter setSearchId={setSearchId} setSortOrder={setSortOrder} />
         <ListCustomers searchId={searchId} sortOrder={sortOrder} />

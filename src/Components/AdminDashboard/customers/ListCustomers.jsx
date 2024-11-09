@@ -30,19 +30,19 @@ const Table = ({ searchId, sortOrder }) => {
   }
 
   return (
-    <div className="bg-[rgb(41,41,41)] text-white min-h-screen p-4 flex-grow">
+    <div className="bg-[rgb(41,41,41)] text-white  p-4 flex-grow">
       <div className="max-w-full p-4 mx-auto overflow-x-auto bg-black rounded-lg shadow-md">
         <table className="w-full text-base border-collapse md:text-sm">
           <thead>
             <tr className="hidden md:table-row">
-              <th className="p-3 text-right text-gray-300 bg-black border-b border-gray-500 min-w-[100px]">
-                ID
+              <th className="p-3 text-center text-gray-300 bg-black border-b border-gray-500 min-w-[100px]">
+                الإجراء
+              </th>
+              <th className="p-3 text-center text-gray-300 bg-black border-b border-gray-500 min-w-[100px]">
+                الحالة
               </th>
               <th className="p-3 text-right text-gray-300 bg-black border-b border-gray-500 min-w-[150px]">
                 تاريخ الإنشاء
-              </th>
-              <th className="p-3 text-right text-gray-300 bg-black border-b border-gray-500 min-w-[150px]">
-                العميل
               </th>
               <th className="p-3 text-right text-gray-300 bg-black border-b border-gray-500 min-w-[150px]">
                 الموقع الإلكتروني
@@ -50,11 +50,11 @@ const Table = ({ searchId, sortOrder }) => {
               <th className="p-3 text-right text-gray-300 bg-black border-b border-gray-500 min-w-[150px]">
                 البريد الإلكتروني
               </th>
-              <th className="p-3 text-center text-gray-300 bg-black border-b border-gray-500 min-w-[100px]">
-                الحالة
+              <th className="p-3 text-right text-gray-300 bg-black border-b border-gray-500 min-w-[150px]">
+                العميل
               </th>
-              <th className="p-3 text-center text-gray-300 bg-black border-b border-gray-500 min-w-[100px]">
-                الإجراء
+              <th className="p-3 text-right text-gray-300 bg-black border-b border-gray-500 min-w-[100px]">
+                ID
               </th>
             </tr>
           </thead>
@@ -65,22 +65,26 @@ const Table = ({ searchId, sortOrder }) => {
                 key={item.id}
               >
                 <td
-                  className="p-3 md:text-right md:border-none"
-                  data-label="ID"
+                  className="p-3 text-center md:border-none"
+                  data-label="Action"
                 >
-                  {item.id}
+                  <div className="flex justify-center gap-2">
+                    <FaEdit className="text-gray-500 transition duration-200 cursor-pointer hover:text-blue-500" />
+                    <FaTrash className="text-gray-500 transition duration-200 cursor-pointer hover:text-red-500" />
+                  </div>
                 </td>
+                <td
+                  className="p-3 text-center md:border-none"
+                  data-label="Status"
+                >
+                  <StatuesModal />
+                </td>
+
                 <td
                   className="p-3 md:text-right md:border-none"
                   data-label="Created At"
                 >
                   {item.createdAt}
-                </td>
-                <td
-                  className="p-3 md:text-right md:border-none"
-                  data-label="Customer"
-                >
-                  {item.name}
                 </td>
                 <td
                   className="p-3 md:text-right md:border-none"
@@ -95,19 +99,16 @@ const Table = ({ searchId, sortOrder }) => {
                   {item.email}
                 </td>
                 <td
-                  className="p-3 text-center md:border-none"
-                  data-label="Status"
+                  className="p-3 md:text-right md:border-none"
+                  data-label="Customer"
                 >
-                  <StatuesModal />
+                  {item.name}
                 </td>
                 <td
-                  className="p-3 text-center md:border-none"
-                  data-label="Action"
+                  className="p-3 md:text-right md:border-none"
+                  data-label="ID"
                 >
-                  <div className="flex justify-center gap-2">
-                    <FaEdit className="text-gray-500 transition duration-200 cursor-pointer hover:text-blue-500" />
-                    <FaTrash className="text-gray-500 transition duration-200 cursor-pointer hover:text-red-500" />
-                  </div>
+                  {item.id}
                 </td>
               </tr>
             ))}
