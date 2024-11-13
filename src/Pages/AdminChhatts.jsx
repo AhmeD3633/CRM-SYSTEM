@@ -54,8 +54,13 @@ function AdminChhatts() {
                   <td><Chat /></td>
                 </tr>
               )
-              )) : <tr>
-                <td style={{ textAlign: 'center' }}>No Data</td>
+              )) :    <tr>
+                <td
+                  colSpan="7"
+                  style={{ textAlign: "center", padding: "20px" }}
+                >
+                  No results found
+                </td>
               </tr>
             }
           </tbody>
