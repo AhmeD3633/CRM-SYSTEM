@@ -46,7 +46,7 @@ const SearchAndSort = ({ searchTerm, setSearchTerm, sortOrder, setSortOrder }) =
         <FaSearch className="absolute left-3 top-4 text-gray-500" />
         <input
           type="text"
-          placeholder="Search by ID"
+          placeholder="البحث من خلال ال ID"
           className="w-full px-[15px] py-[13px] text-white bg-black rounded-lg shadow-md"
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
@@ -57,6 +57,7 @@ const SearchAndSort = ({ searchTerm, setSearchTerm, sortOrder, setSortOrder }) =
           options={options}
           styles={customStyles}
           onChange={(selectedOption) => setSortOrder(selectedOption.value)}
+          placeholder="Filter by data range"
         />
       </div>
     </div>

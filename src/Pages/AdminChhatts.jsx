@@ -45,6 +45,7 @@ function AdminChhatts() {
           </thead>
           <tbody>
             {
+              sortedData.length > 0 ? (
               sortedData.map((item) => (
                 <tr key={item.id}>
                   <td>{item.id}</td>
@@ -52,7 +53,10 @@ function AdminChhatts() {
                   <td>{item.email}</td>
                   <td><Chat /></td>
                 </tr>
-              ))
+              )
+              )) : <tr>
+                <td style={{ textAlign: 'center' }}>No Data</td>
+              </tr>
             }
           </tbody>
         </table>
