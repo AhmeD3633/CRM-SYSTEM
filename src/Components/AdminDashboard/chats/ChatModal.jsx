@@ -33,7 +33,7 @@ const ChatModal = () => {
     <>
       <button
         onClick={handleOpen}
-        className="px-10 py-1 bg-[#0d3d2c] text-emerald-400 font-bold rounded-md hover:bg-emerald-400 hover:text-gray-900 transition duration-200"
+        className="px-10 py-2 bg-[#0d3d2c] text-emerald-400 font-bold rounded-md hover:bg-emerald-400 hover:text-gray-900 transition duration-200"
       >
         أرسل رسالة{" "}
       </button>
