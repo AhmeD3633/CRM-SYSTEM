@@ -5,18 +5,17 @@ import stars from "../../../assets/Media/Frame 2095584759 (1).png";
 
 function HomeLayout() {
   return (
-    <div className="">
+    <div className="flex justify-center items-center">
       {/* Background section with overlay and responsive height */}
       <div
         style={{ backgroundImage: `url(${bgImg})` }}
-        className="h-[65vh] md:h-[70vh] px-6 md:px-10 w-full bg-center rounded-md bg-cover flex items-center bg-no-repeat relative capitalize overflow-hidden"
-      >
-        <div className="flex items-center justify-center gap-10 p-0 m-0 ">
+        className="h-[65vh] md:h-[70vh] px- md:px-10 bg-center rounded-md bg-cover flex items-center bg-no-repeat capitalize overflow-hidden">
+        <div className="flex w-full items-center gap-10 justify-center p-0 m-0 ">
           {/* Chart image - visible on larger screens */}
           <div className="">
             <img
               src={charts}
-              className="h-[55vh] w-[50vw] opacity-85 hidden lg:block"
+              className="h-[55vh] w-[40vw] opacity-85 hidden lg:block"
               alt="Chart"
             />
           </div>
@@ -24,14 +23,14 @@ function HomeLayout() {
           {/* Content container - text and action buttons */}
           <div className="flex flex-col items-center gap-5 text-center">
             {/* Heading with Arabic text and inline CRM abbreviation */}
-            <h1 className="text-xl md:text-2xl lg:text-5xl">
+            <h1 className="text-xl md:text-2xl lg:text-5xl text-right">
               قم بتحسين عملك <br />
               بكفاءة باستخدام اقوي <br />
               <bdi>CRM</bdi> نظام
             </h1>
 
             {/* Description paragraph */}
-            <p className="text-xs text-gray-400 md:text-sm lg:text-xl">
+            <p className="text-xs text-gray-400 md:text-sm lg:text-xl text-right">
               ZBOOMA CRM <br />
               يساعد الشركات على تطوير الأعمال <br />
               باستخدام التكنولوجيا والميزات التي تجعل الأمر سهلاً <br />

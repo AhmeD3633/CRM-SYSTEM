@@ -27,7 +27,7 @@ const CreateAppointment = () => {
       </div>
       <div className="grid items-center w-full grid-cols-1 gap-6 pl-8 pr-2 md:grid-cols-2 lg:grid-cols-4">
         {/* Button */}
-        <button className=" bg-[#00c853] hover:bg-[#0F430F] outline-none text-white font-semibold  rounded-md px-6 py-[11px]">
+        <button className=" bg-[#00c853] hover:bg-[#0F430F] outline-none text-white font-semibold -mr-[39px] ml-[10px] md:m-0  rounded-md px-6 py-[11px]">
           انشئ ميعاد
         </button>
         <div className="w-full col-span-3">
