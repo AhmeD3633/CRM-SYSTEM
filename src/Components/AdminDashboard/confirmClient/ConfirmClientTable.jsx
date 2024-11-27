@@ -28,7 +28,7 @@ const ConfirmClientTable = ({ searchId, sortOrder }) => {
         } else {
           setData(initialData);
         }
-      }, [searchId, initialData]);
+      }, [searchId]);
     
       if (sortOrder === "asc") {
         data.sort((a, b) => a.name.localeCompare(b.name));
@@ -41,9 +41,9 @@ const ConfirmClientTable = ({ searchId, sortOrder }) => {
     };
 
     const handleDelete = (id) => {
-        setData(data.filter((customer) => customer.id !== id));
-        alert(`Client with ID ${id} deleted!`);
-    };
+    setData((prevData) => prevData.filter((customer) => customer.id !== id)); // Use functional update to avoid stale state
+    alert(`Client with ID ${id} deleted!`);
+};
 
     return (
         <div className="w-full mx-auto bg-[#292929] text-white p-4 h-full">

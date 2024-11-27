@@ -4,7 +4,7 @@ import HomeNav from "../../Components/AdminDashboard/home/HomeNav";
 
 function Home() {
   return (
-    <div className="w-[95%] flex flex-col gap-4 mx-auto">
+    <div className="w-full md:w-[95%] mx-auto flex flex-col gap-6 md:gap-8">
       <HomeNav />
       <HomeLayout />
       <HomeFooter />
