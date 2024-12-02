@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import img2 from "../../../assets/Media/signINimg.png";
-import logo from "../../../assets/Media/top.png";
+import img2 from "../../assets/Media/signINimg.png";
+import logo from "../../assets/Media/top.png";
 import { Link } from "react-router-dom";
 import axios from "axios";
 function Sign() {

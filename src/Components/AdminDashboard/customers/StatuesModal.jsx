@@ -12,7 +12,7 @@ function StatuesModal() {
       {/* Button to open the modal */}
       <button
         onClick={toggleModal}
-        className="bg-[#00c853] hover:bg-[#0C563E] duration-300 text-white font-semibold py-2 px-4 rounded-md h-8"
+        className="px-2 py-1 bg-[#0d3d2c] text-emerald-400 font-bold rounded-md hover:bg-emerald-400 hover:text-gray-900 transition duration-200"
       >
         عرض الحالة
       </button>

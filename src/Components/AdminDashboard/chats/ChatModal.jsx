@@ -4,11 +4,11 @@ const ChatModal = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [messages, setMessages] = useState([
     {
-      text: "It's over Anakin,\nI have the high ground.",
+      text: "هلا والله ومرحب بيك",
       isUser: false,
     },
     {
-      text: "You underestimate my power!",
+      text: "حياك الله ابو عبد العزيز شلونك",
       isUser: true,
     },
   ]);
@@ -33,13 +33,13 @@ const ChatModal = () => {
     <>
       <button
         onClick={handleOpen}
-        className="px-4 py-2 text-white bg-green-800 rounded hover:bg-green-800 dark:hover:bg-green-500"
+        className="px-10 py-2 bg-[#0d3d2c] text-emerald-400 font-bold rounded-md hover:bg-emerald-400 hover:text-gray-900 transition duration-200"
       >
-        أرسل رسالتك
+        أرسل رسالة{" "}
       </button>
 
       {isOpen && (
-        <div className="fixed inset-0 flex items-center justify-center overflow-y-auto bg-black bg-opacity-50 ">
+        <div className="fixed inset-0 flex items-center justify-center overflow-y-auto bg-black bg-opacity-50">
           <div className="w-full p-4 max-h-[90vh] overflow-y-auto bg-[#292929] rounded-lg shadow-lg md:w-1/2 lg:w-1/3">
             <h2 className="mb-1 text-lg font-bold text-right text-white">
               محادثة
@@ -65,7 +65,7 @@ const ChatModal = () => {
                 <textarea
                   value={newMessage}
                   onChange={(e) => setNewMessage(e.target.value)}
-                  placeholder="اكتب رسالتك هنا..."
+                  placeholder="...اكتب رسالتك هنا"
                   className="w-full p-2 bg-[#292929] text-white border border-gray-500 rounded text-right"
                   rows={3}
                 />

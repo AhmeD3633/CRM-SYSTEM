@@ -1,8 +1,8 @@
-import CreateAppointment from "../Components/AdminDashboard/Appointments/CreateAppointment";
-import AppointmentsTable from "../Components/AdminDashboard/Appointments/AppointmentsTable";
-import SideBar from "../Components/SideBar";
+import CreateAppointment from "../../Components/AdminDashboard/Appointments/CreateAppointment";
+import AppointmentsTable from "../../Components/AdminDashboard/Appointments/AppointmentsTable";
+import SideBar from "../../Components/AdminDashboard/Utilities/SideBar";
 
-const Appointments = () => {
+const AppointmentsPage = () => {
   const clientTime = [
     {
       sender: "أحمد محمد",
@@ -53,7 +53,7 @@ const Appointments = () => {
 
   return (
     <div className="flex w-full h-screen ">
-      <div className="flex flex-col justify-around  items-center w-full bg-[#292929] overflow-auto">
+      <div className="flex flex-col justify-around items-center w-full bg-[#292929] overflow-auto">
         <CreateAppointment />
         <AppointmentsTable clientTime={clientTime} />
       </div>
@@ -62,4 +62,4 @@ const Appointments = () => {
   );
 };
 
-export default Appointments;
+export default AppointmentsPage;

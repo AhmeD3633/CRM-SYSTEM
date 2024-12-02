@@ -34,7 +34,7 @@ function HomeLayout() {
             <p className="text-xs text-gray-400 lg:text-xl">
               ZBOOMA CRM <br />
               يساعد الشركات على تطويير الأعمال <br />
-              باستخدام التطنولوجيا والميزات التي تجعل الأمر سهلا <br />
+              باستخدام التكنولوجيا والميزات التي تجعل الأمر سهلا <br />
               للمستخدمين
             </p>
 
@@ -51,7 +51,7 @@ function HomeLayout() {
               {/* Try now button with arrow icon */}
               <a
                 href="#"
-                className="rounded-full w-[120px] flex items-center gap-2 bg-[#0A8F0A] hover:bg-[#0F430F] duration-300 shadow-sm py-2 px-4 h-14"
+                className="rounded-full w-[120px] flex items-center gap-2 bg-[#0A8F0A] text-white hover:bg-[#0F430F] duration-300 shadow-sm py-2 px-4 h-14"
               >
                 <FaLongArrowAltLeft /> <span>جرب الان</span>
               </a>

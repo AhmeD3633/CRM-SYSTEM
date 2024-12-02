@@ -19,7 +19,7 @@ function HomeNav() {
           </button>
           <button
             onClick={() => navigate("/register")}
-            className="rounded-3xl w-fit line-clamp-1 bg-[#0A8F0A] hover:bg-[#0F430F] duration-300 shadow-sm py-2 px-4"
+            className="rounded-3xl text-white w-fit line-clamp-2 bg-[#0A8F0A] hover:bg-[#0F430F] duration-300 shadow-sm py-2 px-4"
           >
             مستخدم جديد
           </button>

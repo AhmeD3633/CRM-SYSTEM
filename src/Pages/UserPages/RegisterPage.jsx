@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import  { useState } from "react";
 import { AiFillEye, AiFillEyeInvisible } from "react-icons/ai";
 import axios from "axios";
 import RegisterModal from "../../Components/Forms/User/RegisterModal";

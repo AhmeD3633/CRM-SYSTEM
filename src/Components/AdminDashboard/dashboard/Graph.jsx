@@ -6,7 +6,11 @@ const BarChart = () => {
     chart: {
       height: 350,
       type: "bar",
+      toolbar: {
+        show: false, // Hide the toolbar menu button
+      },
     },
+    colors: ["#00c853"],
     plotOptions: {
       bar: {
         // borderRadius: 10,
@@ -18,24 +22,30 @@ const BarChart = () => {
     dataLabels: {
       enabled: true,
       formatter: function (val) {
-        return val + "%";
+        return val + " " + "عملاء";
       },
       offsetY: -20,
       style: {
-        fontSize: "12px",
-        colors: ["#00c853"],
+        fontSize: "14px",
+        colors: ["white"],
       },
     },
     xaxis: {
       categories: [
-        "Saturday",
-        "Sunday",
-        "Monday",
-        "Tuesday",
-        "Wednesday",
-        "Thursday",
-        "Friday",
+        "السبت",
+        "الاحد",
+        "الاثنين",
+        "الثلاثاء",
+        "الاربعاء",
+        "الخميس",
+        "الجمعة",
       ],
+      labels: {
+        style: {
+          colors: Array(7).fill("#fff"), // Gray color for each day
+          fontSize: "14px",
+        },
+      },
       position: "top",
       axisBorder: {
         show: false,
@@ -44,22 +54,23 @@ const BarChart = () => {
         show: false,
       },
       crosshairs: {
-        // fill: {
-        //   type: "gradient",
-        //   gradient: {
-        //     colorFrom: "#D8E3F0",
-        //     colorTo: "#BED1E6",
-        //     stops: [0, 100],
-        //     opacityFrom: 0.4,
-        //     opacityTo: 0.5,
-        //   },
-        // },
+        fill: {
+          type: "gradient",
+          gradient: {
+            colorFrom: "#D8E3F0",
+            colorTo: "#BED1E6",
+            stops: [0, 100],
+            opacityFrom: 0.4,
+            opacityTo: 0.1,
+          },
+        },
       },
       tooltip: {
         enabled: true,
       },
     },
     yaxis: {
+      max: 30,
       axisBorder: {
         show: false,
       },
@@ -73,27 +84,31 @@ const BarChart = () => {
         },
       },
     },
+    grid: {
+      borderColor: "#808080", // Set the grid lines to gray
+      strokeDashArray: 4, // Optional: dashed effect for the grid lines
+    },
     title: {
-      text: "Number of Cliens this Week",
+      text: "عدد العملاء هذا الاسبوع",
       floating: true,
       offsetY: 330,
       align: "center",
       style: {
-        color: "#555",
+        color: "#fff",
       },
     },
   });
 
   const [series] = useState([
     {
-      name: "Clients",
-      data: [2, 3, 4, 9, 4, 3, 3],
+      name: "العملاء",
+      data: [2, 3, 4, 12, 4, 3, 3],
     },
   ]);
 
   return (
     <div>
-      <div id="chart">
+      <div className="bg-[#0d0d0d] py-16 rounded-lg mx-6" id="chart">
         <ReactApexChart
           options={options}
           series={series}

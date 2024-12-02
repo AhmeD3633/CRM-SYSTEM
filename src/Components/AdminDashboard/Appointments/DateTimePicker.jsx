@@ -48,8 +48,10 @@ const DateTimePicker = () => {
       width: "100%",
       minHeight: "auto",
       textAlign: "center",
-      backgroundColor: "#292929",
+      backgroundColor: "#0D0D0D",
+      padding: "6px 10px",
       border: "none",
+      borderRadius: "8px",
       boxShadow: "none",
       "&:hover": {
         border: "none",
@@ -76,7 +78,7 @@ const DateTimePicker = () => {
   };
 
   return (
-    <div className="flex flex-col md:flex-row items-center md:items-center justify-between w-full space-y-4 md:space-y-0 md:space-x-4 mx-auto">
+    <div className="flex flex-col items-center justify-between w-full mx-auto space-y-4 md:flex-row md:items-center md:space-y-0 md:space-x-3">
       {/* Start Time */}
       <div className="flex-1 w-full">
         <Select
@@ -85,7 +87,7 @@ const DateTimePicker = () => {
           onChange={setStartTime}
           placeholder="Start Time"
           styles={customStyles}
-          className="border p-2 rounded-md text-white"
+          className="p-2 text-white rounded-md "
           components={{ DropdownIndicator }}
         />
       </div>
@@ -98,7 +100,7 @@ const DateTimePicker = () => {
           onChange={setEndTime}
           placeholder="End Time"
           styles={customStyles}
-          className="border p-2 rounded-md text-white"
+          className="p-2 text-white rounded-md "
           components={{ DropdownIndicator }}
         />
       </div>
@@ -111,7 +113,7 @@ const DateTimePicker = () => {
           onChange={setDay}
           placeholder="Select Day"
           styles={customStyles}
-          className="border p-2 rounded-md text-white"
+          className="p-2 text-white rounded-md "
         />
       </div>
     </div>
