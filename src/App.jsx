@@ -1,5 +1,5 @@
 import HomePage from "./Pages/AdminPages/HomePage";
-import AdminSignINPage from "./Pages/AdminPages/AdminSignINPage";
+import AdminSignINPage from "./Pages/FormsPages/AdminSignINPage";
 import { Route, Routes } from "react-router-dom";
 import AppointmentsPage from "./Pages/AdminPages/AppointmentsPage";
 import CustomerPage from "./Pages/AdminPages/AdminCustomersPage";
@@ -16,6 +16,7 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/register" element={<RegisterPage />} />
+        <Route path="/adminsignin" element={<AdminSignINPage />} />
         <Route path="/admindashboard" element={<AdminDashboardPage />} />
         <Route path="/signin" element={<AdminSignINPage />} />
         <Route path="/appointments" element={<AppointmentsPage />} />

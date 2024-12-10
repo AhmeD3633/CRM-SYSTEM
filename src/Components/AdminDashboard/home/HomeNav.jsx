@@ -41,7 +41,7 @@ function HomeNav() {
             <span>مستخدم</span>
           </button>
           <button
-            onClick={() => navigate("/sign")}
+            onClick={() => navigate("/adminsignin")}
             className="flex gap-3 rounded-3xl bg-[#0A8F0A] text-xs sm:text-sm text-white py-2 px-4 hover:bg-[#0F430F] duration-300 w-fit"
           >
             <MdAdminPanelSettings className="text-xl sm:text-2xl" />
