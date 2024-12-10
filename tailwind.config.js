@@ -17,13 +17,14 @@ module.exports = {
           DEFAULT: "#23272E",
         },
       },
+      backgroundImage: {
+        image: "url('src/assets/Media/bg.png')",
+      },
     },
     fontFamily: {
       Poppins: ["cairo", "sans-serif"],
     },
   },
-  daisyui: {
-
-  },
+  daisyui: {},
   plugins: [require("daisyui")],
 };

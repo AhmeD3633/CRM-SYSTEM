@@ -1,6 +1,5 @@
 import logo from "../../../assets/Media/logo.png";
 import { MdAdminPanelSettings } from "react-icons/md";
-// import logo from "../../assets/Media/logo.png";
 import { FaUserTie } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 

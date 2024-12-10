@@ -1,9 +1,9 @@
-import  { useState } from "react";
+import { useState } from "react";
 import { AiFillEye, AiFillEyeInvisible } from "react-icons/ai";
 import axios from "axios";
-import RegisterModal from "../../Components/Forms/User/RegisterModal";
+import RegisterModal from "./RegisterModal";
 
-const Form = () => {
+const RegisteFormComp = () => {
   const [showPassword, setShowPassword] = useState(false);
   const [formData, setFormData] = useState({
     user_username: "",
@@ -64,6 +64,7 @@ const Form = () => {
           user_url: "",
           user_password: "",
         });
+        alert("Registration successful!");
       })
       .catch((error) => {
         console.error(
@@ -74,28 +75,30 @@ const Form = () => {
   };
 
   return (
-    <section className="w-full pl-[64px] pr-[64px] bg-[#292929]">
+    <section className="w-full px-4 sm:px-6 md:px-8">
       <div className="w-full">
         <div className="text-right">
-          <h1 className="text-[32px] text-[white] font-bold">إنشاء حساب</h1>
-          <p className="text-[18px] text-[#969696]">
+          <h1 className="text-[28px] md:text-[32px] text-[white] font-bold">
+            إنشاء حساب
+          </h1>
+          <p className="text-[14px] md:text-[18px] text-[#969696]">
             إنشاء حساب لمتابعة أعمالك
           </p>
         </div>
         <form
           onSubmit={handleSubmit}
-          className="bg-[#292929] w-full rounded space-y-2 pt-6 pb-8 mb-4"
+          className="w-full rounded space-y-2 pt-6 pb-8 mb-4"
         >
           {formFields.map((field) => (
             <div className="relative mb-3" key={field.id}>
               <label
-                className="block text-[#969696] text-sm font-bold mb-2 text-right"
+                className="block text-[#969696] text-xs md:text-sm font-bold mb-2 text-right"
                 htmlFor={field.id}
               >
                 {field.label}
               </label>
               <input
-                className="text-right border rounded-[10px] w-full py-2 px-3 text-[white] focus:outline-none focus:ring-1 focus:ring-[#0A8F0A] bg-[#292929]"
+                className="text-right bg-[#292929] rounded-md w-full py-2 md:py-3 px-4 md:px-6 text-[white] focus:outline-none focus:ring-1 focus:ring-[#0A8F0A]"
                 id={field.id}
                 type={
                   field.id === "user_password"
@@ -110,7 +113,7 @@ const Form = () => {
               />
               {field.id === "user_password" && (
                 <span
-                  className="w-[fit-content] absolute right-3 top-[38px] left-3 text-[gray] cursor-pointer"
+                  className="w-[fit-content] absolute right-3 top-[34px] md:top-[38px] text-[gray] cursor-pointer"
                   onClick={() => setShowPassword(!showPassword)}
                 >
                   {showPassword ? (
@@ -137,7 +140,7 @@ const Form = () => {
             <div className="flex-1 border-b border-gray-300"></div>
           </div>
 
-          <div className="text-center flex items-center justify-center gap-[8px] text-[white] text-[12px]">
+          <div className="text-center flex items-center justify-center gap-[8px] text-[white] text-[10px] md:text-[12px]">
             <a className="text-[#367AFF] underline" href="/user">
               سجل دخول
             </a>
@@ -149,4 +152,4 @@ const Form = () => {
   );
 };
 
-export default Form;
+export default RegisteFormComp;

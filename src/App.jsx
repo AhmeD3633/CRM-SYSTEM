@@ -8,12 +8,14 @@ import AdminDashboardPage from "./Pages/AdminPages/AdminDashboardPage";
 import AdminChatPage from "./Pages/AdminPages/AdminChatPage";
 import UserDashboard from "./Pages/UserPages/UserDashboard";
 import AdminConfirmClient from "./Pages/AdminPages/AdminConfirmClient";
+import RegisterPage from "./Pages/FormsPages/RegisterPage";
 
 function App() {
   return (
     <div className="App ">
       <Routes>
         <Route path="/" element={<HomePage />} />
+        <Route path="/register" element={<RegisterPage />} />
         <Route path="/admindashboard" element={<AdminDashboardPage />} />
         <Route path="/signin" element={<AdminSignINPage />} />
         <Route path="/appointments" element={<AppointmentsPage />} />

@@ -4,7 +4,7 @@ const RegisterModal = () => {
   return (
     <div>
       <button
-        className="btn bg-[#0A8F0A] hover:bg-[#0F430F]  w-full text-white font-bold border-none rounded-[10px] focus:outline-none focus:shadow-outline transition duration-300"
+        className="btn bg-[#0A8F0A] hover:bg-[#0F430F]  w-full text-white font-bold border-none rounded-md focus:outline-none focus:shadow-outline transition duration-300"
         type="submit'"
         onClick={() => document.getElementById("my_modal_5").showModal()}
       >
