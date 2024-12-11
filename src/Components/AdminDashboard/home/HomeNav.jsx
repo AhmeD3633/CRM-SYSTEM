@@ -34,7 +34,7 @@ function HomeNav() {
       <dialog id="my_modal_2" className="modal">
         <div className="modal-box w-[300px] sm:w-[350px] flex justify-around items-center bg-[#292929]">
           <button
-            onClick={() => navigate("/user")}
+            onClick={() => navigate("/usersignin")}
             className="flex gap-3 rounded-3xl text-xs sm:text-sm text-white py-2 px-4 hover:bg-[#0A8F0A] duration-300 w-fit"
           >
             <FaUserTie className="text-xl sm:text-2xl" />

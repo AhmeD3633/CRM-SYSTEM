@@ -141,7 +141,7 @@ const RegisteFormComp = () => {
           </div>
 
           <div className="text-center flex items-center justify-center gap-[8px] text-[white] text-[10px] md:text-[12px]">
-            <a className="text-[#367AFF] underline" href="/user">
+            <a className="text-[#367AFF] underline" href="/UserSignIn">
               سجل دخول
             </a>
             <p>لديك بالفعل حساب؟</p>

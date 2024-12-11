@@ -9,6 +9,7 @@ import AdminChatPage from "./Pages/AdminPages/AdminChatPage";
 import UserDashboard from "./Pages/UserPages/UserDashboard";
 import AdminConfirmClient from "./Pages/AdminPages/AdminConfirmClient";
 import RegisterPage from "./Pages/FormsPages/RegisterPage";
+import UserSignInPage from "./Pages/FormsPages/UserSignInPage";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/register" element={<RegisterPage />} />
         <Route path="/adminsignin" element={<AdminSignINPage />} />
+        <Route path="/usersignin" element={<UserSignInPage />} />
         <Route path="/admindashboard" element={<AdminDashboardPage />} />
         <Route path="/signin" element={<AdminSignINPage />} />
         <Route path="/appointments" element={<AppointmentsPage />} />
