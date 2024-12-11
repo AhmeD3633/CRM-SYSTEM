@@ -3,21 +3,36 @@ import img2 from "../../assets/Media/signINimg.png";
 import logo from "../../assets/Media/top.png";
 import { Link } from "react-router-dom";
 import axios from "axios";
+import adminSchema from "../../Components/Forms/Schema/AdminSchema";
+import { z } from "zod";
 
-function Sign() {
+function AdminSignINPage() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
 
   async function submit(e) {
     e.preventDefault();
-    let res = await axios.post(" ", {
-      // Api
-      email: email,
-      password: password,
-    });
-    if (res.status === 200) {
-      window.localStorage.setItem("email", email);
-      window.location.pathname = "/AdminDashboard";
+
+    try {
+      adminSchema.parse({ email, password });
+      setError("");
+
+      const res = await axios.post("https://example.com/api/login", {
+        email,
+        password,
+      });
+
+      if (res.status === 200) {
+        window.localStorage.setItem("email", email);
+        window.location.pathname = "/AdminDashboard";
+      }
+    } catch (err) {
+      if (err instanceof z.ZodError) {
+        setError(err.errors[0].message);
+      } else {
+        setError("An unexpected error occurred.");
+      }
     }
   }
 
@@ -66,7 +81,7 @@ function Sign() {
                   id="email"
                   type="email"
                   placeholder="البريد الالكتروني"
-                  className="text-right  rounded-md w-full py-3 px-6 text-[white] focus:outline-none focus:ring-1 focus:ring-[#0A8F0A] bg-[#292929]"
+                  className="text-right rounded-md w-full py-3 px-6 text-[white] focus:outline-none focus:ring-1 focus:ring-[#0A8F0A] bg-[#292929]"
                 />
               </div>
 
@@ -80,9 +95,12 @@ function Sign() {
                   id="password"
                   type="password"
                   placeholder="كلمه المرور"
-                  className="text-right  rounded-md w-full py-3 px-6 text-[white] focus:outline-none focus:ring-1 focus:ring-[#0A8F0A] bg-[#292929]"
+                  className="text-right rounded-md w-full py-3 px-6 text-[white] focus:outline-none focus:ring-1 focus:ring-[#0A8F0A] bg-[#292929]"
                 />
               </div>
+
+              {/* Display validation error */}
+              {error && <p className="text-red-500 text-sm mb-4">{error}</p>}
 
               <button
                 className="bg-[#0A8F0A] hover:bg-[#0F430F] text-white transition duration-300 p-[10px] w-full rounded-[5px] font-bold mb-[20px] mt-[20px]"
@@ -98,4 +116,4 @@ function Sign() {
   );
 }
 
-export default Sign;
+export default AdminSignINPage;
